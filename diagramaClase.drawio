@@ -1,0 +1,43 @@
+<mxfile host="65bd71144e">
+    <diagram id="UtlEmfgQS53nmVzGMlky" name="Diagrama de clases Jacquin Academia Musical">
+        <mxGraphModel dx="1355" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Persona - nombre - cedula - correo - fechaNacimiento + registrar() + actualizarDatos()" style="shape=swimlane;whiteSpace=wrap;html=1;startSize=90;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="20" width="180" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Estudiante - idEstudiante - cursosInscritos - historialPagos + consultarHorario() + verMateriales() + consultarProgreso()" style="shape=swimlane;whiteSpace=wrap;html=1;startSize=110;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="20" width="200" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" style="endArrow=block;html=1;" edge="1" parent="1" source="3" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Profesor - idProfesor - horario - cursosAsignados + registrarAsistencia() + planificarClases() + compartirMaterial()" style="shape=swimlane;whiteSpace=wrap;html=1;startSize=130;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="200" width="200" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="endArrow=block;html=1;" edge="1" parent="1" source="5" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Administrador - idAdmin - privilegios + gestionarUsuarios() + crearCurso() + asignarHorario()" style="shape=swimlane;whiteSpace=wrap;html=1;startSize=100;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="350" width="200" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="endArrow=block;html=1;" edge="1" parent="1" source="7" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Curso - idCurso - nombreCurso - aula - horario - materiales + asignarProfesor() + inscribirEstudiante() + gestionarMateriales()" style="shape=swimlane;whiteSpace=wrap;html=1;startSize=130;" vertex="1" parent="1">
+                    <mxGeometry x="530" y="20" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Aula - idAula - capacidad - ubicación + verificarDisponibilidad()" style="shape=swimlane;whiteSpace=wrap;html=1;startSize=100;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="220" width="180" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="endArrow=none;html=1;dashed=1;" edge="1" parent="1" source="9" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="UsuarioInteresado - nombre - correo - ciudadResidencia + consultarCursos() + registrarse()" style="shape=swimlane;whiteSpace=wrap;html=1;startSize=100;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="400" width="200" height="140" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
